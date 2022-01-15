@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+
+<head>
+
+   <meta charset="UTF-8" />
+
+   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+   <title>Educational RC</title>
+
+   <link rel="stylesheet" href="./css/bootstrap.min.css" />
+
+   <link rel="stylesheet" href="./css/all.min.css" />
+
+   <link rel="stylesheet" href="./css/main.css" />
+
+</head>
+
+
+<body>
+
+   <!-- Start Before Looding -->
+
+   <div id="loading">
+
+      <img id="loading-image" src="./images/Preloader_2.gif" alt="Loading..." />
+
+   </div>
+
+   <!-- End Before Looding -->
+
+
+   <div id="container">
+
+      <main>
+
+         <!-- Start Hedder -->
+
+         <header class="col-7">
+
+            <div class="container head">
+
+               <div id="FirstSound" class="sound-icon" onclick="desctiptinAudio()">
+
+                  <img id="sound-icon" src="./images/audio_icon.png" />
+
+                  <audio id="desctiptinAudio" src="./audio/110921837.mp3"></audio>
+
+               </div>
+
+               <div class="header-text">
+
+                  <h1>Listen and tick (✓). Then say</h1>
+
+               </div>
+
+               <audio id="correct" src="./audio/correct.mp3"></audio>
+
+               <audio id="incorrect" src="./audio/incorrect.mp3"></audio>
+
+            </div>
+
+         </header>
+
+         <!-- End Hedder -->
+
+
+         <!-- Start Main Part -->
+
+         <section>
+
+            <div class="container">
+
+               <div class="main-part">
+
+                  <div class="slider-content">
+
+                     
+
+                     <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-inner">
+                           <div class="carousel-item active">
+
+                              <p>1</p>
+
+                              <div class="row" >
+
+                                 
+
+                                 <div class="col-6">
+                                    
+                                    <div id="good-1" class="correct card text-white choose" onclick="good ()">
+      
+                                       <img src="./images/p62_ex8_1.png" class="card-img" alt="...">
+      
+                                       <div class="card-img-overlay">
+      
+                                          <div class="card-text">a</div>
+      
+                                       </div>
+      
+                                       <div id="right" style="display: none;">
+      
+                                          <img src="./images/right.png">
+      
+                                       </div>
+      
+                                    </div>
+                                 </div>
+
+                                 <div class="col-6">
+
+                                    <div id="bad-1" class="in-correct card text-white choose"  onclick="bad ()" >
+      
+                                       <img src="./images/p62_ex8_2.png" class="card-img" alt="...">
+      
+                                       <div class="card-img-overlay">
+      
+                                          <div class="card-text">b</div>
+      
+                                       </div>
+      
+                                       <div id="wrong" style="display: none;">
+      
+                                          <img src="./images/crossMark.png" style="width: 100%;">
+      
+                                       </div>
+      
+                                    </div>
+                                 </div>
+
+                              </div>
+                           </div>
+                           <div class="carousel-item">
+                              
+                              <p>2</p>
+
+                              <div class="row">
+
+                                 <div class="col-6">
+                                    <div id="good-2" class="correct card text-white choose" onclick="good2 ()">
+   
+                                       <img src="./images/p62_ex8_3.png" class="card-img" alt="...">
+      
+                                       <div class="card-img-overlay">
+      
+                                          <div class="card-text">a</div>
+      
+                                       </div>
+      
+                                       <div id="right2" style="display: none;">
+      
+                                          <img src="./images/right.png">
+      
+                                       </div>
+      
+                                    </div>
+                                 </div>
+
+                                 <div class="col-6">
+                                    <div id="bad-2" class="in-correct card text-white choose"  onclick="bad2 ()" >
+   
+                                       <img src="./images/p62_ex8_4.png" class="card-img" alt="...">
+      
+                                       <div class="card-img-overlay">
+      
+                                          <div class="card-text">b</div>
+      
+                                       </div>
+      
+                                       <div id="wrong2" style="display: none;">
+      
+                                          <img src="./images/crossMark.png" style="width: 100%;">
+      
+                                       </div>
+      
+                                    </div>
+                                 </div>
+
+                                 
+   
+                              </div>
+                           </div>
+
+                        </div>
+
+                     </div>
+
+                  </div>
+
+               </div>
+
+            </div>
+
+         </section>
+         <!-- End Main Part -->
+
+
+
+         <!-- Start Footer -->
+
+         <footer class="control-part">
+
+            <div class="footer">
+
+               <div class="replay" onclick="reloadall()">
+
+                  <img src="./images/replay_icon.png" class="img-responsive" />
+
+               </div>
+
+
+               <div class="player">
+
+                  <audio id="av-tag" controls src="./audio/110921885.mp3" type="audio/ogg">
+
+                  </audio>
+
+                  <button class="play-btn">
+
+                     <img id="img-paly" src="./images/play.png" onclick="disAppeer1()">
+
+                     <img id="img-pause" src="./images/pause.png" style="display: none;" onclick="disAppeer2()">
+
+                  </button>
+
+                  <div class="play-time"></div>
+
+                  <!-- <input id="cur-time" type="range" min="0" max="10" step="0" value="0"> -->
+
+                  <input id="cur-time" type="range" max="2.7" step="any" value="0">
+
+               </div>
+
+               <div id="reload" class="reload" onclick="reload()"
+                  style="margin: 1% 2% 1% 2%; width: 7%; display: inline-block;">
+
+                  <img id="reload" src="./images/reload_icon.png" class="img-responsive" />
+
+               </div>
+
+               <div onclick="showans()" class="show-ans"
+                  style="margin: 1% 2% 1% 2%; width: 9%; display: inline-block;">
+
+                  <img id="show-ans" src="./images/showAns_icon.png" class="img-responsive" />
+
+               </div>
+
+               <div href="#carouselExampleControls" data-slide="prev" class="back disabled" style="margin: 1% 2% 1% 2%; width: 7%; display: inline-block;">
+
+                  <img src="./images/back_icon.png" class="img-responsive" />
+
+               </div>
+
+               <div class="counter">
+
+                  <div id="page-no" class="page-no">1 of 2</div>
+
+               </div>
+
+               <div href="#carouselExampleControls" data-slide="next" class="next" style="margin: 1% 2% 1% 0%; width: 7%; display: inline-block;">
+
+                  <img id="next" src="./images/next_icon.png" class="img-responsive" />
+
+               </div>
+
+            </div>
+
+         </footer>
+
+         <!-- End Footer -->
+
+      </main>
+
+   </div>
+
+
+
+
+
+   <script src="./js/jquery-3.5.1.min.js"></script>
+
+   <script src="./js/bootstrap.bundle.min.js"></script>
+
+   <script src="./js/main.js"></script>
+
+</body>
+
+</html>
